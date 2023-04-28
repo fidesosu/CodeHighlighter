@@ -1,0 +1,22 @@
+{
+  "name": "Code Highlighter",
+  "version": "1.0",
+  "description": "Simply highlights any code inside a ",
+  "author": "fides",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "highlight.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "242": "images/logo.png"
+  },
+  "manifest_version": 2
+}
