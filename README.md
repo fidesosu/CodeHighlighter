@@ -1,7 +1,7 @@
 # Code Highlighter
 
 Highlights your code in your browser using <a href="https://highlightjs.org/">higlight.js</a>,
-I made this so viewing websites with raw data would be easier.
+the extension is intended for viewing raw data pages.
 
 # Limitations
 
