@@ -10,3 +10,7 @@ Only highlights the code inside a ```<pre>``` AND ```<code>``` tag.
 # Possible Problems
 
 It adds a ```<code>``` tag inside the ```<pre>``` tag if none exists yet, so if there isn't supposed to be a ```<code>``` tag after the ```<pre>``` tag, it might break something.
+
+# Actual Problems
+
+It sometimes just thinks the code is a completely different language.
