@@ -9,7 +9,7 @@
         "<all_urls>"
       ],
       "js": [
-        "highlight.js",
+        "highlight.min.js",
         "content.js"
       ],
       "run_at": "document_end"
