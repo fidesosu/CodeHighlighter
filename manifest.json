@@ -1,8 +1,11 @@
 {
   "name": "Code Highlighter",
-  "version": "1.0",
-  "description": "Simply highlights any code inside a ",
+  "version": "1.2",
+  "description": "Simply highlights any code inside a pre and code tag.",
   "author": "fides",
+  "permissions": [
+    "menus"
+  ],
   "content_scripts": [
     {
       "matches": [
@@ -17,6 +20,15 @@
   ],
   "icons": {
     "242": "images/logo.png"
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "images/logo.png",
+      "32": "images/logo.png"
+    },
+    "default_title": "Whereami?",
+    "default_popup": "popup/menu.html"
   },
   "manifest_version": 2
 }

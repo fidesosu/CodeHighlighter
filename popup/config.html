@@ -1,0 +1,118 @@
+<style>
+  * {
+    font-family: Consolas,monaco,monospace !important;
+  }
+
+  .config-page {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #252525;
+    border: 1px solid #333;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  .page-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #00796b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .back-button:hover {
+    background-color: #006358;
+  }
+
+  .config-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .config-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .blacklist-field {
+    height: 125px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .blacklist-field:focus {
+    outline: none;
+  }
+
+  .apply-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #00796b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .apply-button:hover {
+    background-color: #006358;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+</style>
+
+<div class="config-page">
+  <div class="page-header">
+    <h3>Configuration</h3>
+    <a href="menu.html"><button class="back-button">&#8249; Back</button></a>
+  </div>
+  <form class="config-form">
+    <label for="blacklist-field">URL Blacklist</label>
+    <textarea type="text" style="resize: none;" id="blacklist-field" class="blacklist-field" placeholder="Enter URLs to blacklist, separated by commas"></textarea>
+    <button type="submit" class="apply-button">Apply</button>
+  </form>
+</div>
