@@ -26,7 +26,6 @@ function save_theme(event) {
   localStorage.setItem("selectedTheme", selectedOption);
 
   // Optionally, you can add a success message here
-  alert("Saved theme!");
 }
 
 // Define the different CSS styles
@@ -37,25 +36,10 @@ var custom_mode = 'some custom css';
 // Apply the default styling based on the user's preference
 var style = document.createElement('style');
 style.type = 'text/css';
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  style.innerHTML = dark_mode;
-} else {
-  style.innerHTML = light_mode;
-}
-document.getElementsByTagName('head')[0].appendChild(style);
 
-// Function to switch between the different CSS styles
-function switch_theme() {
-  var theme_select = document.querySelector('.theme_dropdown');
-  var selected_value = theme_select.value;
-  if (selected_value === 'dark') {
-    style.innerHTML = dark_mode;
-  } else if (selected_value === 'light') {
-    style.innerHTML = light_mode;
-  } else if (selected_value === 'custom') {
-    style.innerHTML = custom_mode;
-  }
-}
+style.innerHTML = localStorage.getItem("selectedTheme") === "dark" ? dark_mode : light_mode;
+
+document.getElementsByTagName('head')[0].appendChild(style);
 
 // Code to convert <pre> tags to <code> tags and highlight syntax
 var preTags = document.getElementsByTagName("pre");
